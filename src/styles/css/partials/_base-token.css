@@ -1,0 +1,313 @@
+:root {
+  /*Base Tokens - Color - Grey*/
+  --gray-10: #fbfbfb;
+  --gray-50: #f7f7f7;
+  --gray-100: #ebebeb;
+  --gray-200: #dddddd;
+  --gray-300: #c2c2c2;
+  --gray-400: #a5a5a5;
+  --gray-500: #717171;
+  --gray-600: #606060;
+  --gray-700: #4b4b4b;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-a100: #ebebeb;
+  --gray-a200: #dddddd;
+  --gray-a400: #a5a5a5;
+  --gray-a700: #4b4b4b;
+
+  /*Base Tokens - Color - Yellow*/
+  --yellow-50: #ffecbe;
+  --yellow-100: #ffe6a8;
+  --yellow-200: #ffde8b;
+  --yellow-300: #ffd364;
+  --yellow-400: #ffc430;
+  --yellow-500: #eaa700;
+  --yellow-600: #c78f00;
+  --yellow-700: #a97900;
+  --yellow-800: #906700;
+  --yellow-900: #7a5800;
+
+  /*Base Tokens - Color - Blue*/
+  --blue-10: #8dbbfc;
+  --blue-50: #69a2f1;
+  --blue-100: #4083e1;
+  --blue-200: #2f71cb;
+  --blue-300: #1e60ba;
+  --blue-400: #1556af;
+  --blue-500: #0e4b9f;
+  --blue-600: #0a4596;
+  --blue-700: #093b81;
+  --blue-800: #042f6b;
+  --blue-900: #002354;
+
+  /*Base Tokens - Color - Green*/
+  --green-10: #f9fffc;
+  --green-50: #d6f3e5;
+  --green-100: #b2f2d3;
+  --green-200: #98eec5;
+  --green-300: #76e9b1;
+  --green-400: #49e197;
+  --green-500: #20c375;
+  --green-600: #1ba663;
+  --green-700: #178d54;
+  --green-800: #147847;
+  --green-900: #11663d;
+
+  /*Base Tokens - Color - Red*/
+  --red-10: #fff2f3;
+  --red-50: #f1cfcc;
+  --red-100: #edbfbb;
+  --red-200: #e7aaa4;
+  --red-300: #df8d86;
+  --red-400: #d4675e;
+  --red-500: #bb3d32;
+  --red-600: #9f342b;
+  --red-700: #872c24;
+  --red-800: #73261f;
+  --red-900: #62201a;
+
+  /*Base Tokens - Color - Purple*/
+  --purple-10: #b8a8e5;
+  --purple-50: #a692df;
+  --purple-100: #957cd9;
+  --purple-200: #8366d2;
+  --purple-300: #7151cc;
+  --purple-400: #603bc5;
+  --purple-500: #4e25bf;
+  --purple-600: #401aa7;
+  --purple-700: #391698;
+  --purple-800: #32108d;
+  --purple-900: #280780;
+  --purple-background-primary: #ffffff;
+  --purple-primary: #4e25bf;
+
+  /*Base Tokens - Color - blue-green*/
+  --blue-green-10: #e5fdff;
+  --blue-green-50: #cffafd;
+  --blue-green-100: #b1f0f4;
+  --blue-green-200: #82e1e8;
+  --blue-green-300: #59d0d8;
+  --blue-green-400: #31a3ab;
+  --blue-green-500: #197f87;
+  --blue-green-600: #156d73;
+  --blue-green-700: #125c62;
+  --blue-green-800: #0f4e53;
+  --blue-green-900: #0d4347;
+
+  /*Base Tokens - Color - Common*/
+  --white: #ffffff;
+  --black: #000000;
+  --red: #ff0000;
+  --green: #00ff00;
+  --blue: #0000ff;
+  --yellow: #ffff00;
+
+  /*Base Tokens - Point*/
+  --point-0: 0;
+  --point-1: 1;
+  --point-2: 2;
+  --point-3: 3;
+  --point-4: 4;
+  --point-5: 5;
+  --point-6: 6;
+  --point-7: 7;
+  --point-8: 8;
+  --point-9: 9;
+  --point-10: 10;
+  --point-11: 11;
+  --point-12: 12;
+  --point-13: 13;
+  --point-14: 14;
+  --point-15: 15;
+  --point-16: 16;
+  --point-17: 17;
+  --point-18: 18;
+  --point-19: 19;
+  --point-20: 20;
+  --point-21: 21;
+  --point-22: 22;
+  --point-23: 23;
+  --point-24: 24;
+  --point-25: 25;
+  --point-26: 26;
+  --point-27: 27;
+  --point-28: 28;
+  --point-29: 29;
+  --point-30: 30;
+  --point-31: 31;
+  --point-32: 32;
+  --point-33: 33;
+  --point-34: 34;
+  --point-35: 35;
+  --point-36: 36;
+  --point-37: 37;
+  --point-38: 38;
+  --point-39: 39;
+  --point-40: 40;
+  --point-41: 41;
+  --point-42: 42;
+  --point-43: 43;
+  --point-44: 44;
+  --point-45: 45;
+  --point-46: 46;
+  --point-47: 47;
+  --point-48: 48;
+  --point-49: 49;
+  --point-50: 50;
+
+  /*Base Tokens - zIndex*/
+  --z-index-minus-100: -100;
+  --z-index-minus-50: -50;
+  --z-index-minus-20: -20;
+  --z-index-minus-10: -10;
+  --z-index-0: 0;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+  --z-index-5: 5;
+  --z-index-6: 6;
+  --z-index-7: 7;
+  --z-index-8: 8;
+  --z-index-9: 9;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-60: 60;
+  --z-index-70: 70;
+  --z-index-80: 80;
+  --z-index-90: 90;
+  --z-index-100: 100;
+
+  /*Base Tokens - Time*/
+  --time-10: 10;
+  --time-100: 100;
+  --time-200: 200;
+  --time-300: 300;
+  --time-400: 400;
+  --time-500: 500;
+  --time-600: 600;
+  --time-700: 700;
+  --time-800: 800;
+  --time-900: 900;
+  --time-1000: 1000;
+  --time-2000: 2000;
+
+  /*Base Tokens - Size*/
+  --size-0: 0;
+  --size-10: 1;
+  --size-20: 2;
+  --size-25: 3;
+  --size-30: 4;
+  --size-35: 5;
+  --size-40: 6;
+  --size-45: 7;
+  --size-50: 8;
+  --size-55: 9;
+  --size-60: 10;
+  --size-70: 11;
+  --size-75: 12;
+  --size-80: 13;
+  --size-90: 14;
+  --size-100: 16;
+  --size-110: 18;
+  --size-120: 20;
+  --size-140: 22;
+  --size-150: 24;
+  --size-170: 26;
+  --size-180: 28;
+  --size-190: 30;
+  --size-200: 30;
+
+  /*Base Tokens - Font*/
+  --font-family: "iransansx";
+  --font-family-alternate: "tahoma";
+  --font-size-base: 16;
+
+  /*Base Tokens - Rem Size*/
+  --rem-size-1: 0.625;
+  /*10px*/
+  --rem-size-2: 0.75;
+  /*12px*/
+  --rem-size-3: 0.8125;
+  /*13px*/
+  --rem-size-4: 0.875;
+  /*14px*/
+  --rem-size-5: 1;
+  /*16px*/
+  --rem-size-6: 1.125;
+  /*18px*/
+  --rem-size-7: 1.25;
+  /*20px*/
+  --rem-size-8: 1.375;
+  /*22px*/
+  --rem-size-9: 1.5;
+  /*24px*/
+  --rem-size-10: 1.625;
+  /*26px*/
+  --rem-size-11: 1.75;
+  /*28px*/
+  --rem-size-12: 2;
+  /*32px*/
+  --rem-size-13: 2.125;
+  /*34px*/
+  --rem-size-14: 2.375;
+  /*38px*/
+  --rem-size-15: 2.5;
+  /*40px*/
+
+  /*Base Tokens - Font - Wight*/
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+
+  /*Base Tokens - Screen - Size*/
+  --screen-xs-start: 0;
+  --screen-sm-start: 600;
+  --screen-md-start: 900;
+  --screen-lg-start: 1200;
+  --screen-xl-start: 1536;
+
+
+  --shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.14);
+  --shadow-light: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  --shadow-top-light: 0px -2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-bottom-light: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-light-inset: 0px 2px 6px rgba(0, 0, 0, 0.06) inset;
+
+  --large-container-width: 1920px;
+  --medium-container-width: 1300px;
+  --small-container-width: 700px;
+
+  --container-padding: 32px;
+  --container--top-padding: 100px
+}
+
+@media only screen and (max-width:1536px) {
+  :root {
+    --container-padding: 24px;
+    --container--top-padding: 80px
+  }
+}
+
+@media only screen and (max-width:1023px) {
+  :root {
+    --container-padding: 16px;
+    --container--top-padding: 60px
+  }
+}
+
+@media only screen and (max-width:600px) {
+  :root {
+    --container--top-padding: 40px
+  }
+}

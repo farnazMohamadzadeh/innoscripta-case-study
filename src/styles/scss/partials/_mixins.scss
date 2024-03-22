@@ -1,0 +1,107 @@
+@import "./variables";
+
+@mixin variable-font-face($font_family, $file_path) {
+    @font-face {
+        font-family: "#{$font_family}";
+        src: url("#{$file_path}#{$font_family}-vf.woff") format("woff-variations");
+        font-weight: 100 900;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "#{$font_family}";
+        src: url("#{$file_path}#{$font_family}-regular.woff") format("woff");
+        font-weight: 400;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "#{$font_family}";
+        src: url("#{$file_path}#{$font_family}-bold.woff") format("woff");
+        font-weight: 700;
+        font-display: swap;
+    }
+}
+
+@mixin down($screen) {
+    @media (max-width: $screen) {
+        @content;
+    }
+}
+
+@mixin font($variant) {
+    font-size:var(--font-size-#{$variant});
+    font-weight:var(--font-weight-#{$variant});
+    line-height:var(--line-height-#{$variant});
+}
+
+@mixin skeleton-loader($height: 20px, $width: 100%, $duration: 1.5s) {
+    width: $width;
+    height: $height;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer $duration infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@mixin container($size) {
+    max-width: var(--#{$size}-container-width);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    margin: 0 auto;
+}
+
+@mixin up($screen) {
+    @media (min-width: $screen) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{$screen-xl-start}) and (max-width: #{$screen-xl-end}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$screen-lg-start}) and (max-width: #{$screen-lg-end}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$screen-md-start}) and (max-width: #{$screen-md-end}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-start}) and (max-width: #{$screen-sm-end}) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: #{$screen-xs-end}) {
+        @content;
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}

@@ -1,0 +1,23 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray-800);
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--spacing-xx-large);
+
+    &__children {
+        width: 100%;
+    }
+}
+
+@include xs {
+    .root {
+        padding: 0;
+    }
+}
