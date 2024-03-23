@@ -1,0 +1,46 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+
+button[aria-disabled="true"] {
+    cursor: unset !important;
+    color: var(--gray-400) !important;
+}
+
+.root {
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 0 var(--spacing-xx-large);
+    border-radius: 50px;
+    white-space: nowrap;
+
+    @include font("button1");
+}
+
+.root:global(.variant_contained) {
+    background-color: var(--gray-800);
+    color: var(--white);
+    border: 1px solid var(--gray-800);
+}
+
+.root:global(.variant_outlined) {
+    background-color: var(--white);
+    color: var(--gray-800);
+    border: 1px solid var(--gray-800);
+}
+
+.root:global(.variant_text) {
+    background-color: transparent;
+    color: var(--white);
+    border: 0;
+    padding: 0;
+}
+
+@include down($screen_sm_end) {
+    .root {
+        height: 42px;
+    }
+}

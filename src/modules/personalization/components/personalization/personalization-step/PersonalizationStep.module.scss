@@ -1,0 +1,65 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+
+.root {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: var(--spacing-xxx-large);
+
+   &__step {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-large);
+
+      &__number {
+         width: 50px;
+         height: 50px;
+         background-color: var(--yellow-300);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         color: var(--gray-900);
+      }
+
+      &__title {
+         color: var(--gray-300);
+      }
+   }
+
+   &__container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-x-large);
+   }
+}
+
+@include down($screen_sm_end) {
+   .root {
+      &__container {
+         flex-wrap: wrap;
+      }
+   }
+}
+
+@include xs {
+   .root {
+      &__step {
+         &__number {
+            width: 35px;
+            height: 35px;
+         }
+
+         &__title {
+            @include font("subtitle1");
+         }
+      }
+   }
+}
