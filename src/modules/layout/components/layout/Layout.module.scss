@@ -9,15 +9,17 @@
     justify-content: space-between;
     width: 100%;
     min-height: 100vh;
-    padding: var(--spacing-xx-large);
 
     &__children {
         width: 100%;
+        padding: var(--spacing-large);
     }
 }
 
 @include xs {
     .root {
-        padding: 0;
+        &__children {
+            padding: 0;
+        }
     }
 }

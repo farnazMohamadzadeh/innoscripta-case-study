@@ -1,0 +1,32 @@
+@import "src/styles/scss/partials/mixins";
+
+.root {
+    background-color: var(--gray-900);
+    height: 40px;
+    width: 100%;
+    border-top-left-radius: var(--border-radius-small);
+    border-top-right-radius: var(--border-radius-small);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include font("overline");
+    gap: var(--spacing-x-small);
+    padding: 0 var(--spacing-xxx-large);
+    color: var(--gray-400);
+
+    &__copyRight {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-x-small);
+
+        svg {
+            fill: var(--gray-400);
+        }
+    }
+}
+
+@include xs {
+    .root {
+        padding: 0 var(--spacing-large);
+    }
+}

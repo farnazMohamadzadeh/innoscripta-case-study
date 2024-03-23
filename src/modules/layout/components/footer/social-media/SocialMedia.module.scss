@@ -1,0 +1,23 @@
+@import "src/styles/scss/partials/mixins";
+
+.root {
+    width: auto;
+    display: flex;
+    gap: var(--spacing-large);
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+
+    svg {
+        width: 20px;
+        height: auto;
+        fill: var(--gray-400);
+        transition: fill ease 0.3s;
+
+        &:hover {
+            fill: var(--white);
+        }
+    }
+}

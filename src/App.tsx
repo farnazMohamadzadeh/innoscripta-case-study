@@ -6,7 +6,7 @@ import Layout from './modules/layout/components/layout';
 function App() {
   return (
     <Layout>
-      test
+      <></>
     </Layout>
   );
 }
