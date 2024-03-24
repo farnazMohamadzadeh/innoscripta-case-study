@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Header.module.scss';
+import Button from 'src/modules/general/button';
 import NewsIcon from 'src/modules/general/components/icons/news';
 import LoginIcon from 'src/modules/general/components/icons/login';
 
@@ -8,9 +9,9 @@ export default function Header() {
     <div className={styles.root}>
       <NewsIcon />
       <div className={styles.root__actions}>
-      <button>
+      <Button variant='contained'>
         {`Subscribe`}
-      </button>
+      </Button>
       <LoginIcon />
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './Personalization.module.scss';
-import PersonalizationData from '../personalization-data';
 import PersonalizationActions from './personaliation-actions';
-import { StepperType } from '../../libraries/personalization-types';
 import PersonalizationStep from './personalization-step/PersonalizationStep';
+import { StepperType } from 'src/modules/personalization/libraries/personalization-types';
+import PersonalizationData from 'src/modules/personalization/components/personalization-data';
 
 
 export default function Personalization() {

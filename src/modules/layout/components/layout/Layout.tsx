@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styles from './Layout.module.scss'
-import Header from '../header';
-import Footer from '../footer/Footer';
+import Header from 'src/modules/layout/components/header';
+import Footer from 'src/modules/layout/components/footer/Footer';
 
 export default function Layout({ children, }: {
   children: ReactNode

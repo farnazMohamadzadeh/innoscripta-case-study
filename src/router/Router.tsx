@@ -1,7 +1,6 @@
 import React from 'react'
-import Personalization from '../modules/personalization/components/personalization';
+import Personalization from 'src/modules/personalization/components/personalization';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-
 
 const Router = createBrowserRouter(
     createRoutesFromElements(

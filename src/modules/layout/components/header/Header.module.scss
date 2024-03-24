@@ -17,21 +17,6 @@
         align-items: center;
         justify-content: center;
         gap: var(--spacing-large);
-
-        button {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-transform: uppercase;
-            padding: 0 var(--spacing-x-large);
-            border-radius: var(--border-radius-small);
-            white-space: nowrap;
-            color: var(--gray-900);
-            cursor: pointer;
-
-            @include font("button1");
-        }
     }
 }
 

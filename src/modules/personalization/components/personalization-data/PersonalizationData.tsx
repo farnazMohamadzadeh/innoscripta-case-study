@@ -3,7 +3,6 @@ import CbsIcon from 'src/modules/general/components/icons/cbs'
 import FilmIcon from 'src/modules/general/components/icons/film'
 import FoodIcon from 'src/modules/general/components/icons/food'
 import SportIcon from 'src/modules/general/components/icons/sport'
-import { StepperType } from '../../libraries/personalization-types'
 import FashionIcon from 'src/modules/general/components/icons/fashion'
 import NewsApiIcon from 'src/modules/general/components/icons/news-api'
 import BenzingaIcon from 'src/modules/general/components/icons/benzinga'
@@ -11,7 +10,8 @@ import GuardianIcon from 'src/modules/general/components/icons/guardian'
 import TechnologyIcon from 'src/modules/general/components/icons/technology'
 import NikkeiAsiaIcon from 'src/modules/general/components/icons/nikkei-asia'
 import NewYorkTimesIcon from 'src/modules/general/components/icons/new-york-times'
-import { AuthorType, CategoryType, PersonalizationType, SourceType } from '../../libraries/personalization-constants'
+import { StepperType } from 'src/modules/personalization/libraries/personalization-types'
+import { AuthorType, CategoryType, PersonalizationType, SourceType } from 'src/modules/personalization/libraries/personalization-constants'
 
 const PersonalizationData: StepperType[] = [
     {

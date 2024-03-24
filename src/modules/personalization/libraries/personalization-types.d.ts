@@ -24,7 +24,7 @@ interface PersonalizationState {
     currentStep: number
 }
 
-interface UpdateInterestsPayload {
+interface UpdatePersonalizationPayload {
     key: PersonalizationType
     value: string
 }

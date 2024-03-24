@@ -7,14 +7,15 @@ button[aria-disabled="true"] {
 }
 
 .root {
-    height: 50px;
+    height: 40px;
     display: flex;
     cursor: pointer;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    letter-spacing: 1px;
     padding: 0 var(--spacing-xx-large);
-    border-radius: 50px;
+    border-radius: var(--border-radius-small);
     white-space: nowrap;
 
     @include font("button1");

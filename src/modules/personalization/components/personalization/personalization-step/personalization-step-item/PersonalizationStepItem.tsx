@@ -1,8 +1,8 @@
 import React, { HTMLAttributes } from 'react'
 import styles from './PersonalizationStepItem.module.scss'
-import { PersonalizationOptionType } from '@/src/modules/personalization/libraries/personalization-types'
+import { PersonalizationOptionType } from 'src/modules/personalization/libraries/personalization-types'
 
-interface InterestsStepItemProps extends HTMLAttributes<HTMLDivElement> {
+interface PersonalizationStepItemProps extends HTMLAttributes<HTMLDivElement> {
     item: PersonalizationOptionType
     selected: boolean
 }
@@ -10,12 +10,18 @@ interface InterestsStepItemProps extends HTMLAttributes<HTMLDivElement> {
 export default function PersonalizationStepItem({
     item,
     selected,
-}: InterestsStepItemProps) {
+     ...props
+}: PersonalizationStepItemProps) {
 
     return (
-        <div className={styles.root}>
+        <div
+        {...props}
+         className={`${styles.root} ${selected ? styles.root__selected : ''}`}
+         >
             {item.icon}
-            {item.title}
+            <span>
+                {item.title}
+            </span>
         </div>
     )
 }
