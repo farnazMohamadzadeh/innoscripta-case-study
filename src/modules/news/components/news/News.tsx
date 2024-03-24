@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './News.module.scss'
 import NewsCard from 'src/modules/news/components/news-card'
 import Container from 'src/modules/general/components/container'
+import NewsCardSkeleton from '../news-card/news-card-skeleton/NewsCardSkeleton'
 
 export default function News() {
     const news = {
@@ -19,6 +20,7 @@ export default function News() {
             item={news}
             className={styles.root__card}
         />
+        <NewsCardSkeleton className={styles.root__card} />
     </Container>
   )
 }
