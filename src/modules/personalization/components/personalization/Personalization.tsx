@@ -4,11 +4,13 @@ import PersonalizationActions from './personaliation-actions';
 import PersonalizationStep from './personalization-step/PersonalizationStep';
 import { StepperType } from 'src/modules/personalization/libraries/personalization-types';
 import PersonalizationData from 'src/modules/personalization/components/personalization-data';
+import Card from 'src/modules/general/components/card';
+import Container from 'src/modules/general/components/container/Container';
 
 
 export default function Personalization() {
     return (
-        <div className={styles.root}>
+        <Container className={styles.root}>
             {PersonalizationData && PersonalizationData.length > 0 && (
             <>
                 <h1>
@@ -17,7 +19,7 @@ export default function Personalization() {
                 <p>
                     {`Let's Personalize Your News Feed by 3 Steps`}
                 </p>
-                <div className={styles.root__container}>
+                <Card>
                     {PersonalizationData.map((step: StepperType, index: number) => (
                         <PersonalizationStep
                             key={`personalization-step-${index}`}
@@ -25,9 +27,9 @@ export default function Personalization() {
                          />
                     ))}
                     <PersonalizationActions />
-                </div>
+                </Card>
             </>
             )}
-        </div>
+        </Container>
     )
 }

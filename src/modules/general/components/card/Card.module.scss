@@ -1,0 +1,15 @@
+@import "src/styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--gray-900);
+    background-color: rgb(17 24 39 / 0.3);
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-xxx-large);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-xx-large) var(--spacing-x-large);
+}

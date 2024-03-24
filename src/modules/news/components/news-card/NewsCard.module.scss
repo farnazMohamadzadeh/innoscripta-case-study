@@ -1,0 +1,46 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+
+.root {
+    padding: var(--spacing-x-large);
+    align-items: flex-start;
+
+    &__image {
+        width: 100%;
+        height: 150px;
+        background-color: var(--gray-800);
+        border-radius: var(--border-radius-small);
+        cursor: pointer;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            @include font("body2");
+            text-transform: uppercase;
+        }
+    }
+
+    &__title {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        max-height: calc(var(--line-height-h4) * 2);
+        text-overflow: ellipsis;
+        position: relative;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        white-space: normal;
+        color: var(--gray-300);
+    }
+
+    &__button {
+        @include font("overline");
+        color: var(--yellow-300) !important;
+    }
+}

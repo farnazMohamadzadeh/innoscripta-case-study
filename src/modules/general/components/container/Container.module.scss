@@ -1,0 +1,12 @@
+@import "src/styles/scss/partials/mixins";
+
+.root {
+    @include container("medium");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    margin-top: var(--spacing-xx-large);
+    gap: var(--spacing-large);
+}

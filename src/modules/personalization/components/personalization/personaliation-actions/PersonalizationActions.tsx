@@ -1,9 +1,9 @@
 import { RootState } from '@/src/redux/store';
-import Button from 'src/modules/general/button'
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './PersonalizationActions.module.scss'
+import Button from 'src/modules/general/components/button'
 import { updateCurrentStep } from 'src/modules/personalization/store/personalization-slice';
 
 
