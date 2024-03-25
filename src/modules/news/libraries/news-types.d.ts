@@ -11,7 +11,15 @@ interface News {
 interface NewsState {
     list: News[]
     filters: NewsFilter
+    pagination: Pagination
     loading: boolean
+}
+
+interface Pagination {
+    totalPage: number
+    pageRangeDisplayed: number
+    currentPage: number
+    pageList: News[]
 }
 
 interface NewsFilter {
@@ -26,7 +34,7 @@ interface UpdateNewsListPayload {
     source:string
 }
 
-interface UpdateKeyWord<K,V> {
+interface UpdateItemType<K,V> {
     itemName: K,
     itemValue: V
 }

@@ -2,12 +2,12 @@
 @import "src/styles/scss/partials/variables";
 
 .root {
+    margin: 0;
     padding: var(--spacing-x-large);
-    align-items: flex-start;
 
     &__image {
         border-radius: var(--border-radius-small);
-        @include skeleton-loader(150px, 100%, 4s);
+        @include skeleton-loader(200px, 100%, 4s);
     }
 
     &__row {

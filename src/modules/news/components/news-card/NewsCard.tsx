@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './NewsCard.module.scss'
 import Card from 'src/modules/general/components/card'
 import Button from 'src/modules/general/components/button'
+import { getFormattedDate } from 'src/modules/general/libraries/general-utils'
 
 interface NewsCardProps {
     item: News
@@ -31,7 +32,7 @@ export default function NewsCard({
             </h5>
             <div className={styles.root__row}>
                 <p>
-                    {item.date}
+                    {getFormattedDate(item.date)}
                 </p>
                 <Button
                     variant='text'

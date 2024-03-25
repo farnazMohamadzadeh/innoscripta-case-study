@@ -1,6 +1,7 @@
 import styles from './News.module.scss'
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import NewsList from 'src/modules/news/components/news-list'
 import Container from 'src/modules/general/components/container'
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks'
 import { initNewsListThunk } from 'src/modules/news/store/news-thunk'
@@ -22,6 +23,7 @@ export default function News() {
 
   return (
     <Container className={styles.root}>
+      <NewsList />
     </Container>
   )
 }

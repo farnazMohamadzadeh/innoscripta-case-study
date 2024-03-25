@@ -1,9 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { initNewsListThunk } from './news-thunk';
 import {
     initNewsState,
     newsResetHelper,
     updateNewsListHelper,
     updateNewsFiltersHelper,
+    updatePaginationHelper,
+    updatePaginationFulfilled,
 } from './news-helper'
 
 export const newsSlice = createSlice({
@@ -12,14 +15,29 @@ export const newsSlice = createSlice({
     reducers: {
         newsReset: newsResetHelper,
         updateNewsList: updateNewsListHelper,
-        updateNewsCriteria: updateNewsFiltersHelper,
-    }
+        updateNewsFilters: updateNewsFiltersHelper,
+        updatePagination: updatePaginationHelper
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(initNewsListThunk.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(initNewsListThunk.fulfilled, (state) => {
+                updatePaginationFulfilled(state,state.list)
+                state.loading = false;
+            })
+            .addCase(initNewsListThunk.rejected, (state) => {
+                state.loading = false;
+            });
+    },
 })
 
 export const {
     newsReset,
     updateNewsList,
-    updateNewsCriteria,
+    updateNewsFilters,
+    updatePagination
 } = newsSlice.actions
 
 export default newsSlice.reducer

@@ -1,0 +1,54 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xx-large);
+
+    &__card {
+        width: calc(25% - 18px);
+    }
+
+    &__empty {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-x-large);
+
+        img {
+            width: 20%;
+            height: auto;
+        }
+    }
+}
+
+@include down(1200px) {
+    .root {
+        &__card {
+            width: calc(33.3333% - 16px);
+        }
+    }
+}
+
+@include down(900px) {
+    .root {
+        gap: var(--spacing-x-large);
+        &__card {
+            width: calc(50% - 8px);
+        }
+    }
+}
+
+@include down(500px) {
+    .root {
+        gap: var(--spacing-x-large);
+        &__card {
+            width: 100%;
+        }
+    }
+}
