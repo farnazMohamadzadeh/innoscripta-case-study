@@ -3,14 +3,26 @@
 
 .root {
     padding: var(--spacing-x-large);
+    margin: 0;
     align-items: flex-start;
 
     &__image {
         width: 100%;
-        height: 150px;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: var(--gray-800);
         border-radius: var(--border-radius-small);
         cursor: pointer;
+        position: relative;
+
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__row {
@@ -29,7 +41,7 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        max-height: calc(var(--line-height-h4) * 2);
+        max-height: calc(var(--line-height-h5) * 3);
         text-overflow: ellipsis;
         position: relative;
         -webkit-line-clamp: 3;

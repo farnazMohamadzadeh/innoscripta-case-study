@@ -1,26 +1,27 @@
-import React from 'react'
 import styles from './News.module.scss'
-import NewsCard from 'src/modules/news/components/news-card'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Container from 'src/modules/general/components/container'
-import NewsCardSkeleton from '../news-card/news-card-skeleton/NewsCardSkeleton'
+import { useAppDispatch, useAppSelector } from 'src/redux/hooks'
+import { initNewsListThunk } from 'src/modules/news/store/news-thunk'
+import { checkEmptyFavorites } from 'src/modules/news/libraries/news-utils'
 
 export default function News() {
-    const news = {
-        title: "this is test for news card",
-        src: "",
-        description: "this is test for news card",
-        date: "22 March 2024",
-        category: "fashion",
-        source: "news api"
+  const
+    navigate = useNavigate(),
+    dispatch = useAppDispatch(),
+    favorites = useAppSelector((state) => state.personalizationReducer.favorites);
+
+  useEffect(() => {
+    if (checkEmptyFavorites(favorites)) {
+      navigate('/');
+    }else{
+      dispatch(initNewsListThunk());
     }
+  }, [])
 
   return (
     <Container className={styles.root}>
-        <NewsCard
-            item={news}
-            className={styles.root__card}
-        />
-        <NewsCardSkeleton className={styles.root__card} />
     </Container>
   )
 }
