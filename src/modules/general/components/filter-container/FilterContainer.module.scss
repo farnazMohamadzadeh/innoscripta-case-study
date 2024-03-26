@@ -1,0 +1,28 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+
+.root {
+    height: 80px;
+    border: 1px solid var(--gray-900);
+    border-radius: var(--border-radius-small);
+    padding: 0 var(--spacing-x-large) 0 var(--spacing-xxx-large);
+    position: relative;
+
+    &__label {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        padding: var(--spacing-small);
+        height: 16px;
+        top: calc(var(--spacing-normal) * -1);
+        left: var(--spacing-x-large);
+        background-color: var(--gray-800);
+        color: var(--gray-300);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        @include font("tiny");
+    }
+}

@@ -6,6 +6,8 @@ import Container from 'src/modules/general/components/container'
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks'
 import { initNewsListThunk } from 'src/modules/news/store/news-thunk'
 import { checkEmptyFavorites } from 'src/modules/news/libraries/news-utils'
+import NewsSearch from '../news-filter'
+import NewsFilter from '../news-filter/NewsFilter'
 
 export default function News() {
   const
@@ -23,6 +25,7 @@ export default function News() {
 
   return (
     <Container className={styles.root}>
+      <NewsFilter />
       <NewsList />
     </Container>
   )

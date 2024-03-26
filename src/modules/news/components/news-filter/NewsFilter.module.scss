@@ -1,0 +1,21 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-xx-large);
+
+        &__item {
+            width: 50%;
+        }
+    }
+}
