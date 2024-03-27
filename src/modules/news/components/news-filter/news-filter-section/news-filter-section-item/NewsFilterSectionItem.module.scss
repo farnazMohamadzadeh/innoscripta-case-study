@@ -1,0 +1,18 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+.root {
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-small) var(--spacing-normal);
+    border-radius: 8px;
+    border: 1px solid var(--gray-600);
+    @include font("body1");
+
+    &__active {
+        border: 1px solid var(--yellow-200);
+        color: var(--yellow-200);
+    }
+}

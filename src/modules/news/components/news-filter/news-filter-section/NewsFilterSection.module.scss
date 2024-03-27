@@ -1,0 +1,27 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+.root {
+    padding: 0 !important;
+
+    &__inner {
+        width: 100%;
+        padding: var(--spacing-x-large);
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--spacing-normal);
+
+        &__item {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-small) var(--spacing-normal);
+            border-radius: 8px;
+            border: 1px solid var(--gray-600);
+            @include font("body1");
+        }
+    }
+}

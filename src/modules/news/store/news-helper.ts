@@ -29,12 +29,12 @@ export const updateNewsListHelper = (state: NewsState, action: PayloadAction<Upd
     state.list = sortedNewsList;
 }
 
+// -----------filters
+
 export const updateNewsFiltersHelper = (state: NewsState, action: PayloadAction<UpdateItemType<FiltersType,string|string[]>>) => {
     state.filters = Object.assign({}, state.filters, { [action.payload.itemName]: action.payload.itemValue, });
 
 }
-
-// -----------filters
 
 export const initFilters = (filters: NewsFilter, favorites: PersonalizationItem[]): NewsFilter => {
     const

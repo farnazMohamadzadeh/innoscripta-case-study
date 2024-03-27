@@ -2,10 +2,10 @@
 @import "src/styles/scss/partials/variables";
 
 .root {
-    height: 80px;
     border: 1px solid var(--gray-900);
     border-radius: var(--border-radius-small);
     padding: 0 var(--spacing-x-large) 0 var(--spacing-xxx-large);
+    margin: 0;
     position: relative;
 
     &__label {

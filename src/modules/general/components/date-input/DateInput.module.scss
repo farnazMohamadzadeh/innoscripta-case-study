@@ -1,0 +1,12 @@
+@import "src/styles/scss/partials/mixins";
+@import "src/styles/scss/partials/variables";
+.root {
+    margin: 0;
+    padding: 0 !important;
+    height: 48px !important;
+
+    &__datepicker {
+        width: 100%;
+    }
+
+}

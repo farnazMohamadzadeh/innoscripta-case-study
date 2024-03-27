@@ -1,17 +1,21 @@
+import React from 'react'
 import styles from './SearchInput.module.scss'
 import FilterContainer from '../filter-container'
-import React, { InputHTMLAttributes } from 'react'
 import SearchIcon from 'src/modules/general/components/icons/search'
 
-export default function SearchInput({ ...props }: InputHTMLAttributes<HTMLInputElement>) {
+export default function SearchInput({
+    className,
+    filterName,
+    onChange
+} : FilterProps<string>) {
+
     return (
         <FilterContainer
             label={'search'}
-            className={`${styles.root} ${props?.className ?? ''}`}
+            className={`${styles.root} ${className ?? ''}`}
         >
             <div className={styles.root__row}>
                 <input
-                    {...props}
                     className={styles.root__row__input}
                 />
                 <SearchIcon />

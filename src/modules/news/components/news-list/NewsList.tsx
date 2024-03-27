@@ -34,9 +34,9 @@ export default function NewsList() {
         <div className={styles.root}>
             {loading ? (
                 <>
-                    {[...Array(DEFAULT_LIMIT)].map((index: number) => (
+                    {[...Array(DEFAULT_LIMIT)].map(() => (
                         <NewsCardSkeleton
-                            key= {`news-skeleton-${index}`}
+                            key= {`news-skeleton-${Math.random()}`}
                             className={styles.root__card}
                         />
                     ))}
