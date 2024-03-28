@@ -2,6 +2,7 @@
 @import "src/styles/scss/partials/variables";
 .root {
     padding: 0 !important;
+    justify-content: flex-start;
 
     &__inner {
         width: 100%;
@@ -9,7 +10,7 @@
         height: auto;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
         gap: var(--spacing-normal);
 

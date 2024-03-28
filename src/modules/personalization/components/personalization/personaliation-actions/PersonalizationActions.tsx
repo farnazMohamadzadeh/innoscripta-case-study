@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './PersonalizationActions.module.scss'
 import Button from 'src/modules/general/components/button'
+import { handleScrollToRoot } from 'src/modules/general/libraries/general-utils';
 import { updateCurrentStep } from 'src/modules/personalization/store/personalization-slice';
 
 
@@ -26,10 +27,11 @@ export default function PersonalizationActions() {
         handleNextClick = () => {            
             if (list.length > 0) {
                 if (isLastStep) {
-                    navigate('/news');
+                    navigate('/news')
                 } else {
                     dispatch(updateCurrentStep({ step: state.currentStep + 1 }))
                 }
+                handleScrollToRoot()
             }
         };
 

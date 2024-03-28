@@ -12,6 +12,7 @@
   --gray-800: #1f2937;
   --gray-850: #1d2838;
   --gray-900: #111827;
+  --gray-950: #1b2432;
   --gray-1000: #0f172a;
 
   /*Base Tokens - Color - Yellow*/
@@ -39,59 +40,6 @@
   --blue-800: #042f6b;
   --blue-900: #002354;
 
-  /*Base Tokens - Color - Green*/
-  --green-10: #f9fffc;
-  --green-50: #d6f3e5;
-  --green-100: #b2f2d3;
-  --green-200: #98eec5;
-  --green-300: #76e9b1;
-  --green-400: #49e197;
-  --green-500: #20c375;
-  --green-600: #1ba663;
-  --green-700: #178d54;
-  --green-800: #147847;
-  --green-900: #11663d;
-
-  /*Base Tokens - Color - Red*/
-  --red-10: #fff2f3;
-  --red-50: #f1cfcc;
-  --red-100: #edbfbb;
-  --red-200: #e7aaa4;
-  --red-300: #df8d86;
-  --red-400: #d4675e;
-  --red-500: #bb3d32;
-  --red-600: #9f342b;
-  --red-700: #872c24;
-  --red-800: #73261f;
-  --red-900: #62201a;
-
-  /*Base Tokens - Color - Purple*/
-  --purple-10: #b8a8e5;
-  --purple-50: #a692df;
-  --purple-100: #957cd9;
-  --purple-200: #8366d2;
-  --purple-300: #7151cc;
-  --purple-400: #603bc5;
-  --purple-500: #4e25bf;
-  --purple-600: #401aa7;
-  --purple-700: #391698;
-  --purple-800: #32108d;
-  --purple-900: #280780;
-  --purple-background-primary: #ffffff;
-  --purple-primary: #4e25bf;
-
-  /*Base Tokens - Color - blue-green*/
-  --blue-green-10: #e5fdff;
-  --blue-green-50: #cffafd;
-  --blue-green-100: #b1f0f4;
-  --blue-green-200: #82e1e8;
-  --blue-green-300: #59d0d8;
-  --blue-green-400: #31a3ab;
-  --blue-green-500: #197f87;
-  --blue-green-600: #156d73;
-  --blue-green-700: #125c62;
-  --blue-green-800: #0f4e53;
-  --blue-green-900: #0d4347;
 
   /*Base Tokens - Color - Common*/
   --white: #ffffff;

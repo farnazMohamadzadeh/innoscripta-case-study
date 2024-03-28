@@ -1,4 +1,3 @@
-import { NEW_YORK_TIMES_URL } from './news-constants';
 import { SourceType } from 'src/modules/personalization/libraries/personalization-constants';
 import { PersonalizationItem } from 'src/modules/personalization/libraries/personalization-types';
 
@@ -24,7 +23,7 @@ export const CustomizeNewYorkTimesNewsResponse = (items: NewYorkTimesNews[]): Ne
         response = items.map((item: NewYorkTimesNews) => {
             return ({
                 title: item.headline.main,
-                src: `${NEW_YORK_TIMES_URL}/${item.multimedia[0]?.url}`,
+                src: `${process.env.REACT_APP_NEW_YORK_TIMES_URL}/${item.multimedia[0]?.url}`,
                 source: SourceType.NewYorkTimes,
                 category: item.section_name,
                 date: item.pub_date,

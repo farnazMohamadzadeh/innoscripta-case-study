@@ -1,9 +1,6 @@
 import axios from 'axios';
 import { NewsSource } from './news-api-utils';
-import { 
-  GUARDIAN_API_KEY, NEWS_API_API_KEY,
-  NEWS_LIMIT, NEW_YORK_TIMES_API_KEY
-} from 'src/modules/news/libraries/news-constants';
+import { NEWS_LIMIT } from 'src/modules/news/libraries/news-constants';
 import { 
   CustomizeNewYorkTimesNewsResponse, customizeGuardianNewsResponse,
   customizeNewYorkTimesCategory, customizeNewsApiNewsResponse
@@ -17,7 +14,7 @@ export class NewsApiNewsSource extends NewsSource {
     const
       keyword = `&q=${filters.category && filters.category.map(category => `${category.toLowerCase()}`).join(' OR ')}${filters.keyword ? `AND ${filters.keyword}` : ''}`,
       date = filters.date ? `&from=${filters.date}` : '',
-      apiKey = `apiKey=${NEWS_API_API_KEY}`,
+      apiKey = `apiKey=${process.env.REACT_APP_NEWS_API_API_KEY}`,
       searchIn = '&searchIn=title'
 
     return `${apiKey}${searchIn}${date}${keyword}`;
@@ -26,7 +23,7 @@ export class NewsApiNewsSource extends NewsSource {
 
   private getNewsApiUrl(filters: NewsFilter): string {
     const
-      baseUrl = 'https://newsapi.org/v2/everything',
+      baseUrl =`${process.env.REACT_APP_NEWS_API_API_BASE_URL}`,
       queryParams = this.initNewsParams(filters);
     return `${baseUrl}?${queryParams}`;
   }
@@ -62,7 +59,7 @@ export class GuardianNewsSource extends NewsSource {
 
       keyword = filters.keyword ? `&q=${filters.keyword}` : '',
       date = filters.date ? `&from-date=${filters.date}` : '',
-      apiKey = `&api-key=${GUARDIAN_API_KEY}`;
+      apiKey = `&api-key=${process.env.REACT_APP_GUARDIAN_API_KEY}`;
 
     let categories = '';
     if (filters.category && filters.category.length > 0) {
@@ -75,7 +72,7 @@ export class GuardianNewsSource extends NewsSource {
 
   private getNewsApiUrl(filters: NewsFilter): string {
     const
-      baseUrl = 'https://content.guardianapis.com/search',
+      baseUrl =`${process.env.REACT_APP_GUARDIAN_API_BASE_URL}`,
       Params = this.initNewsParams(filters);
     return `${baseUrl}?${Params}`;
   }
@@ -108,7 +105,7 @@ export class NewYorkTimesNewsSource extends NewsSource {
       pageSize = `&page-size=${NEWS_LIMIT}`,
       keyword = filters.keyword ? `&q=${filters.keyword}` : '',
       date = filters.date ? `&fq=pub_date:("${filters.date}")` : '',
-      apiKey = `api-key=${NEW_YORK_TIMES_API_KEY}`;
+      apiKey = `api-key=${process.env.REACT_APP_NEW_YORK_TIMES_API_KEY}`;
 
     let filter = '';
 
@@ -124,7 +121,7 @@ export class NewYorkTimesNewsSource extends NewsSource {
 
   private getNewsApiUrl(filters: NewsFilter): string {
     const
-      baseUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json',
+      baseUrl =`${process.env.REACT_APP_NEW_YORK_TIMES_API_BASE_URL}`,
       queryParams = this.initNewsParams(filters);
     return `${baseUrl}?${queryParams}`;
   }

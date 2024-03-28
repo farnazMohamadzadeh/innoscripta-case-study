@@ -9,3 +9,10 @@ export function getFormattedDate(date: string ): string {
         
         return `${day}${seperator}${month}${seperator}${year}`;
 }
+
+export function handleScrollToRoot() {
+    window.scroll({
+        behavior: 'smooth',
+        top: 0,
+    });
+}

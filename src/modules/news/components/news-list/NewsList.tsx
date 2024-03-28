@@ -4,6 +4,7 @@ import NewsCard from 'src/modules/news/components/news-card';
 import ResponsivePagination from 'react-responsive-pagination';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import { updatePagination } from 'src/modules/news/store/news-slice';
+import { handleScrollToRoot } from 'src/modules/general/libraries/general-utils';
 import NewsCardSkeleton from 'src/modules/news/components/news-card/news-card-skeleton';
 import { DEFAULT_LIMIT, PaginationType } from 'src/modules/news/libraries/news-constants';
 
@@ -17,13 +18,6 @@ export default function NewsList() {
             totalPage,
             pageList,
         } = useAppSelector((state) => state.newsReducer.pagination),
-
-        handleScrollToRoot = () => {
-            window.scroll({
-                behavior: 'smooth',
-                top: 0,
-            });
-        },
 
         handlePageChange = (page: number) => {
             dispatch(updatePagination({ itemName: PaginationType.currentPage, itemValue: page }))

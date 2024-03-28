@@ -28,9 +28,9 @@ button[aria-disabled="true"] {
 }
 
 .root:global(.variant_outlined) {
-    background-color: var(--white);
-    color: var(--gray-800);
-    border: 1px solid var(--gray-800);
+    background-color: var(--gray-800);
+    color: var(--gray-300);
+    border: 1px solid var(--gray-300);
 }
 
 .root:global(.variant_text) {
