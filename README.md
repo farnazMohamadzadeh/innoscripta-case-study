@@ -27,9 +27,9 @@ To get a local copy up and running, follow these simple steps.
 3. Build Docker Image
 
    ```bash 
-   docker build -t innoscripta .
+   docker build -t innoscripta-case-study .
 
 4. Run the Docker container:
 
     ```bash 
-   docker run -p 3000:3000 innoscripta
+   docker run -p 3000:3000 innoscripta-case-study
