@@ -46,7 +46,7 @@ export default function NewsFilter() {
                 <div className={styles.root__collapse__row}>
                     <SearchInput
                     onChange={handleFilterChange}
-                    filterName={FiltersType.Date}
+                    filterName={FiltersType.Keyword}
                     className={styles.root__collapse__row__item}
                     />
                     <DateInput
