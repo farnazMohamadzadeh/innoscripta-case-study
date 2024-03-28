@@ -1,8 +1,8 @@
-# FreshNews
+# GlobalNews
 
 Description of your project.
 
-## News Aggregator Test Project with React.js
+## user interface for a news aggregator website that pulls articles from various sources and displays them in a clean, easy-to-read format with React.js
 
 Before you begin, ensure you have met the following requirements:
 
